@@ -65,7 +65,7 @@ Follow these steps to set up the project locally:
 ### Steps
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo/tmc-balikpapan.git
+   git clone https://github.com/UstadzApuy/tmc-balikpapan.git
    cd tmc-balikpapan
    ```
 
