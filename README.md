@@ -87,30 +87,35 @@ Follow these steps to set up the project locally:
    php artisan key:generate
    ```
 
-5. **Run Migrations**:
+5. **Create Sessions Table Migration** (if using database sessions):
+   ```bash
+   php artisan session:table
+   ```
+
+6. **Run Migrations**:
    ```bash
    php artisan migrate
    ```
 
-6. **Seed the Database** (optional):
+7. **Seed the Database** (optional):
    ```bash
    php artisan db:seed
    ```
 
-7. **Build Frontend Assets**:
+8. **Build Frontend Assets**:
    ```bash
    npm run build
    ```
 
-8. **Start the Development Server**:
+9. **Start the Development Server**:
    ```bash
    php artisan serve
    ```
 
-9. **Run Vite for Hot Module Replacement (HMR)** (optional for development):
-   ```bash
-   npm run dev
-   ```
+10. **Run Vite for Hot Module Replacement (HMR)** (optional for development):
+    ```bash
+    npm run dev
+    ```
 
 ## Usage
 

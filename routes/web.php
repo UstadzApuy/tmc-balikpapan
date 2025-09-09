@@ -11,6 +11,13 @@ Route::get('/cctv/{id}', [\App\Http\Controllers\Web\CctvController::class, 'show
 Route::get('/cctv/{id}/modal', [\App\Http\Controllers\Web\CctvController::class, 'modal'])->name('cctv.modal');
 Route::get('/streaming', [\App\Http\Controllers\Web\StreamingController::class, 'index'])->name('streaming');
 
+// Profile routes
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
 // API routes
 Route::prefix('api')->group(function () {
     Route::get('news', [ApiNewsController::class, 'index']);

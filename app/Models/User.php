@@ -22,6 +22,14 @@ class User extends Authenticatable
     ];
 
     /**
+     * Get the login username to be used by Laravel.
+     */
+    public function getAuthIdentifierName()
+    {
+        return 'username';
+    }
+
+    /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
